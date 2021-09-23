@@ -1,0 +1,1 @@
+$ python3.8 old_main.py EX-03-RULE --packets=EX-03-PACKET --print_rulelist_detail=true
