@@ -22,6 +22,11 @@ parser.add_argument(
     type=bool,
     default=False,
     help="ルールリストを出力するかどうか.")
+parser.add_argument(
+    "--dumpfig",
+    type=bool,
+    default=False,
+    help="Trueを指定すると従属グラフをプロットする.")
 
 
 
@@ -77,7 +82,7 @@ if __name__ == "__main__":
 
     graph = SGM(rule_list)
     
-    graph.plot_graph()
+    graph.plot_graph(args.dumpfig)
  
     rule_list2 = graph.sub_graph_mergine()
     print("Start packet filtering.")

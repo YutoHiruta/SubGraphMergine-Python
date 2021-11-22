@@ -111,10 +111,11 @@ class SGM:
         return return_key
 
     
-    def plot_graph(self):
+    def plot_graph(self,save=False):
         pos = nx.nx_pydot.pydot_layout(self.graph,prog='dot')
         nx.draw_networkx(self.graph,pos,node_color=["y"])
-        plt.show()
+        if save:
+            plt.savefig("figDump.png")
     
 
 
